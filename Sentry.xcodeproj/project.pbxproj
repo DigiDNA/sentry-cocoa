@@ -1951,6 +1951,8 @@
 		D41909942D490006002B83D0 /* SentryNSDictionarySanitize+Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SentryNSDictionarySanitize+Tests.m"; sourceTree = "<group>"; };
 		D42E48562D48DF1600D251BC /* SentryBuildAppStartSpansTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentryBuildAppStartSpansTests.swift; sourceTree = "<group>"; };
 		D42E48582D48FC8F00D251BC /* SentryNSDictionarySanitizeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentryNSDictionarySanitizeTests.swift; sourceTree = "<group>"; };
+		D43647EE2D5CF9DC001468E0 /* SentrySpanDataKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentrySpanDataKey.swift; sourceTree = "<group>"; };
+		D43647F02D5CFB71001468E0 /* SentrySpanKeyTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SentrySpanKeyTests.swift; sourceTree = "<group>"; };
 		D46D45E12D5F3FD600A1CB35 /* Sentry_Base.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Sentry_Base.xctestplan; sourceTree = "<group>"; };
 		D46D45E32D5F402100A1CB35 /* iOS-Swift_Base.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "iOS-Swift_Base.xctestplan"; sourceTree = "<group>"; };
 		D46D45E42D5F403E00A1CB35 /* iOS-Swift-Benchmarking_Base.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = "iOS-Swift-Benchmarking_Base.xctestplan"; path = "Plans/iOS-Swift-Benchmarking_Base.xctestplan"; sourceTree = SOURCE_ROOT; };
@@ -1960,8 +1962,6 @@
 		D46D45E82D5F40FA00A1CB35 /* SentryProfilerTests_Base.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = SentryProfilerTests_Base.xctestplan; path = Plans/SentryProfilerTests_Base.xctestplan; sourceTree = SOURCE_ROOT; };
 		D46D45E92D5F411700A1CB35 /* SentrySwiftUI_Base.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = SentrySwiftUI_Base.xctestplan; path = Plans/SentrySwiftUI_Base.xctestplan; sourceTree = SOURCE_ROOT; };
 		D46D45EA2D5F412100A1CB35 /* SentryTests_Base.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = SentryTests_Base.xctestplan; path = Plans/SentryTests_Base.xctestplan; sourceTree = SOURCE_ROOT; };
-		D43647EE2D5CF9DC001468E0 /* SentrySpanDataKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentrySpanDataKey.swift; sourceTree = "<group>"; };
-		D43647F02D5CFB71001468E0 /* SentrySpanKeyTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SentrySpanKeyTests.swift; sourceTree = "<group>"; };
 		D48724DA2D352591005DE483 /* SentryTraceOrigin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentryTraceOrigin.swift; sourceTree = "<group>"; };
 		D48724DC2D354934005DE483 /* SentrySpanOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentrySpanOperation.swift; sourceTree = "<group>"; };
 		D48724DF2D3549C6005DE483 /* SentrySpanOperationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentrySpanOperationTests.swift; sourceTree = "<group>"; };
@@ -5597,6 +5597,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 63AA75C51EB8B00100D153DE /* Sentry.xcconfig */;
 			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 			};
 			name = Debug;
 		};
@@ -5604,6 +5605,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 63AA75C51EB8B00100D153DE /* Sentry.xcconfig */;
 			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 			};
 			name = Release;
 		};
@@ -5687,6 +5689,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 63AA75C51EB8B00100D153DE /* Sentry.xcconfig */;
 			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 			};
 			name = TestCI;
 		};
@@ -5736,6 +5739,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 63AA75C51EB8B00100D153DE /* Sentry.xcconfig */;
 			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 			};
 			name = DebugWithoutUIKit;
 		};
@@ -6131,6 +6135,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 63AA75C51EB8B00100D153DE /* Sentry.xcconfig */;
 			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 			};
 			name = ReleaseWithoutUIKit;
 		};
@@ -6283,6 +6288,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 63AA75C51EB8B00100D153DE /* Sentry.xcconfig */;
 			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 			};
 			name = Test;
 		};
