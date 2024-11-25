@@ -60,7 +60,7 @@
 #endif
 
 #if TARGET_OS_IOS || SENTRY_TARGET_MACOS
-#    define SENTRY_HAS_METRIC_KIT 1
+#    define SENTRY_HAS_METRIC_KIT 0
 #else
 #    define SENTRY_HAS_METRIC_KIT 0
 #endif
