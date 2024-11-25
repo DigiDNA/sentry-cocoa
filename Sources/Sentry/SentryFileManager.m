@@ -652,13 +652,15 @@ NSDictionary<NSString *, NSNumber *> *_Nullable appLaunchProfileConfiguration(vo
     if (![[NSFileManager defaultManager] fileExistsAtPath:url.path]) {
         return nil;
     }
+    
+    return [ NSDictionary dictionaryWithContentsOfURL: url ];
 
-    NSError *error;
-    NSDictionary<NSString *, NSNumber *> *config =
-        [NSDictionary<NSString *, NSNumber *> dictionaryWithContentsOfURL:url error:&error];
-    SENTRY_CASSERT(
-        error == nil, @"Encountered error trying to retrieve app launch profile config: %@", error);
-    return config;
+    //NSError *error;
+    //NSDictionary<NSString *, NSNumber *> *config =
+    //    [NSDictionary<NSString *, NSNumber *> dictionaryWithContentsOfURL:url error:&error];
+    //SENTRY_CASSERT(
+    //    error == nil, @"Encountered error trying to retrieve app launch profile config: %@", error);
+    //return config;
 }
 
 BOOL
@@ -675,9 +677,10 @@ appLaunchProfileConfigFileExists(void)
 void
 writeAppLaunchProfilingConfigFile(NSMutableDictionary<NSString *, NSNumber *> *config)
 {
-    NSError *error;
-    SENTRY_CASSERT([config writeToURL:launchProfileConfigFileURL() error:&error],
-        @"Failed to write launch profile config file: %@.", error);
+    SENTRY_CASSERT( [ config writeToURL: launchProfileConfigFileURL() atomically: YES ], @"Failed to write launch profile config file." );
+    //NSError *error;
+    //SENTRY_CASSERT([config writeToURL:launchProfileConfigFileURL() error:&error],
+    //    @"Failed to write launch profile config file: %@.", error);
 }
 
 void
