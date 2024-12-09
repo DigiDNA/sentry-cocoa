@@ -846,7 +846,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1540;
-				LastUpgradeCheck = 1200;
+				LastUpgradeCheck = 1610;
 				ORGANIZATIONNAME = Sentry;
 				TargetAttributes = {
 					637AFDA5243B02760034958B = {
